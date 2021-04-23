@@ -36,8 +36,8 @@ def predict():
         model_input.append(model_list[0])
         model_input.append(model_list[1])
         model_input.append(model_list[2])
-        for col in X[x_col[3:]]:
-          if X[[col]].columns == model_list[3]:
+        for col in x_col[3:]:
+          if col == model_list[3]:
             model_input.append(1)
           else:
             model_input.append(0)
