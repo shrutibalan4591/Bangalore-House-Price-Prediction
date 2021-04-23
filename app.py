@@ -30,7 +30,7 @@ def predict():
         location = request.form['location']
 
         model_list = [sqft, bath, bhk, location]
-        x_col = X.columns
+        x_col = model.get_booster().feature_names
         model_input = []
 
         model_input.append(model_list[0])
