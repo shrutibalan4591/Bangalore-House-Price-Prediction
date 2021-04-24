@@ -104,7 +104,7 @@ def predict():
         my_prediction = model.predict(data)
         output = round(my_prediction[0], 3)
 
-    return render_template('sample.html', prediction_text='Price of the property would be around $ {}'.format(output))
+    return render_template('sample.html', prediction_text='Price of the property would be around ₹{}Lakhs'.format(output))
 
 if __name__ == "__main__":
     app.run(debug=True)
